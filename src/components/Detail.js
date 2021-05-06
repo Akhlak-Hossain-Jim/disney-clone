@@ -69,6 +69,10 @@ const ImageTitle = styled.div`
   min-height: 170px;
   width: 35vw;
   min-width: 200px;
+  margin-top: 60px;
+  @media (max-width: 768px) {
+    margin-top: 10px;
+  }
   img {
     width: 100%;
     height: 100%;
@@ -85,13 +89,25 @@ const PlayButton = styled.button`
   font-size: 15px;
   padding: 0 24px;
   margin-right: 22px;
+  height: 56px;
   letter-spacing: 1.8px;
   display: flex;
   align-items: center;
-  height: 56px;
   background-color: rgb(249, 249, 249);
   border: none;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+    margin-right: 10px;
+    img {
+      height: 50%;
+    }
+    span {
+      padding: 0 10px 0 0;
+    }
+  }
   &:hover {
     background: rgb(198, 198, 198);
   }
@@ -113,6 +129,14 @@ const AddButton = styled.button`
   border: 2px solid white;
   background-color: rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  @media (max-width: 768px) {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    span {
+      font-size: 20px;
+    }
+  }
   span {
     font-size: 30px;
     color: white;
@@ -120,11 +144,19 @@ const AddButton = styled.button`
 `;
 const GroupWatchButton = styled(AddButton)`
   background: rgb(0, 0, 0);
+  @media (max-width: 768px) {
+    img {
+      height: 80%;
+    }
+  }
 `;
 
 const SubTitle = styled.div`
   color: rgb(249, 249, 249);
   font-size: 15px;
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
   min-height: 20px;
   margin-top: 26px;
 `;
@@ -132,6 +164,9 @@ const SubTitle = styled.div`
 const Description = styled.div`
   line-height: 1.4;
   font-size: 20px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
   margin-top: 16px;
   color: rgb(249, 249, 249);
   max-width: 760px;
